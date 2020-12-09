@@ -1,0 +1,15 @@
+{
+  "name": "leaflet-esbuild",
+  "private": true,
+  "license": "ISC",
+  "scripts": {
+    "build": "esbuild --bundle --outdir=dist/ --loader:.png=file index.js"
+  },
+  "dependencies": {
+    "leaflet": "^1.7.1"
+  },
+  "devDependencies": {
+    "@types/leaflet": "^1.5.19",
+    "esbuild": "^0.8.21"
+  }
+}
