@@ -1,0 +1,17 @@
+name: Node CI
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: "14"
+      - run: yarn install --no-progress --frozen-lockfile
+      - run: yarn build
+      - uses: actions/upload-artifact@v2
+        with:
+          path: dist/
