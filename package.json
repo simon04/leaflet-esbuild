@@ -6,7 +6,7 @@
     "build": "esbuild --bundle --outdir=dist/ --loader:.png=file index.js"
   },
   "dependencies": {
-    "leaflet": "^1.7.1"
+    "leaflet": "simon04/Leaflet#css-marker-icon-2x"
   },
   "devDependencies": {
     "@types/leaflet": "^1.5.19",
