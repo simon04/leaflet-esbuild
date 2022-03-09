@@ -1,4 +1,4 @@
-import * as L from "leaflet";
+import * as L from "leaflet/dist/leaflet-src.esm.js";
 import "leaflet/dist/leaflet.css";
 
 // needed to properly load the images in the Leaflet CSS
