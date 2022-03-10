@@ -1,13 +1,12 @@
 import * as L from "leaflet/dist/leaflet-src.esm.js";
 import "leaflet/dist/leaflet.css";
+import iconUrl from "leaflet/dist/images/marker-icon.png";
+import iconRetinaUrl from "leaflet/dist/images/marker-icon-2x.png";
+import shadowUrl from "leaflet/dist/images/marker-shadow.png";
 
 // needed to properly load the images in the Leaflet CSS
 delete L.Icon.Default.prototype._getIconUrl;
-L.Icon.Default.mergeOptions({
-  iconUrl: require("leaflet/dist/images/marker-icon.png"),
-  iconRetinaUrl: require("leaflet/dist/images/marker-icon-2x.png"),
-  shadowUrl: require("leaflet/dist/images/marker-shadow.png"),
-});
+L.Icon.Default.mergeOptions({ iconUrl, iconRetinaUrl, shadowUrl });
 
 // from https://switch2osm.org/using-tiles/getting-started-with-leaflet/
 var map = L.map("map").setView({ lon: 0, lat: 0 }, 2);
