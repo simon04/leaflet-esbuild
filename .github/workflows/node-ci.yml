@@ -10,7 +10,8 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: "22"
-      - run: yarn install --no-progress --frozen-lockfile
+      - run: corepack enable
+      - run: yarn install
       - run: yarn build
       - uses: actions/upload-artifact@v3
         with:

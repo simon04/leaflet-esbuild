@@ -2,6 +2,7 @@
   "name": "leaflet-esbuild",
   "private": true,
   "license": "ISC",
+  "packageManager": "yarn@4.9.1",
   "scripts": {
     "build": "esbuild --bundle --outdir=dist/ --loader:.png=file index.js"
   },
